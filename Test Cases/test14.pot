@@ -1,0 +1,6 @@
+import NatList
+
+main = ALL xs:NatList.ALL ys:NatList.ALL zs:NatList.eqNat (length (append xs (append ys zs))) (length (append (append xs ys) zs))
+
+
+

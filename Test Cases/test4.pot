@@ -1,0 +1,6 @@
+import Bool
+
+main = ALL a:Bool.EX b:Bool.eqBool a b
+
+
+                    

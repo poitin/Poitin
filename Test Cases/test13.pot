@@ -1,0 +1,5 @@
+import NatList
+
+main = EX xs:NatList.ALL ys:NatList.eqNatList (append xs ys) (append ys xs)
+
+

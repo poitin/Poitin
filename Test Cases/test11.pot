@@ -1,0 +1,6 @@
+import NatList
+
+main = ALL xs:NatList.not (lt (length xs) Zero)
+
+
+

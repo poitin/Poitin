@@ -1,0 +1,6 @@
+import NatList
+
+main = ALL xs:NatList.eqNatList (nrev xs) (qrev xs Nil)
+
+
+

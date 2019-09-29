@@ -1,0 +1,4 @@
+import Bool
+
+main = ALL a:Bool.ALL b:Bool.ALL c:Bool.(a \/ (b => c)) <=> (b => (a \/ c))
+

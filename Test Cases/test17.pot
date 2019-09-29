@@ -1,0 +1,19 @@
+ALL xt:nattree.eqtree (flip (flip xt)) xt
+where
+flip = %xt.case xt of
+              Leaf(x)       => Leaf(x)
+            | Branch(at,bt) => Branch(flip bt,flip at);
+eqtree = %xt yt.case xt of
+                   Leaf(x)       => (case yt of
+                                        Leaf(y)       => eqnum x y
+                                      | Branch(at,bt) => False)
+                 | Branch(at,bt) => case yt of
+                                        Leaf(y)       => False
+                                      | Branch(ct,dt) => ((eqtree at ct) & (eqtree bt dt));
+eqnum = %x y.case x of
+                Zero    => (case y of
+                               Zero    => True
+                             | Succ(y) => False)
+              | Succ(x) => (case y of
+                               Zero    => False
+                             | Succ(y) => eqnum x y);

@@ -1,0 +1,24 @@
+ALL x:nat.ALL s:natset.eqnum x (max x s)
+where
+max = %x s.case s of
+              Empty     => x
+	      | Set(n,ss) => (case (gte n x) of
+	                         True  => max n ss
+				     | False => max x ss);
+
+eqnum = %x y.case x of
+                Zero    => (case y of
+                               Zero    => True
+                             | Succ(y) => False)
+              | Succ(x) => (case y of
+                               Zero    => False
+                             | Succ(y) => eqnum x y);
+
+gte = %a b.case a of
+              Zero     => (case b of 
+	                        Zero    => True
+			          | Succ(x) => False)
+            | Succ(a1) => (case b of 
+	                        Zero     => True
+		                | Succ(b1) => gte a1 b1);
+

@@ -1,0 +1,3 @@
+import Bool
+
+main = ALL x:Bool.x
