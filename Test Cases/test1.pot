@@ -1,0 +1,3 @@
+import Bool
+
+main = EX a:Bool.~a
