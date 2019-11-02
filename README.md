@@ -1,2 +1,2 @@
-# Poit-n
+# Poitín
 Theorem Proving Tool as described in the paper "Distilling Proofs for Theorems"
